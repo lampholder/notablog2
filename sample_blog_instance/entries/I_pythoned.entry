@@ -1,0 +1,10 @@
+<p>I done and pythoned it.</p>
+<p><a href="http://cherrypy.org">Cherrypy</a> had a few pitfalls - you need to tell it if you want it to do the right thing with utf-8. In fact python in general was a bit of a dickface when it came to utf-8; the native file.read() shit exploded in a shower of unhelpful errormessages (the solution was to use a codec.open alternative).</p>
+<p>For templating I used <a href ="http://mustache.github.com">mustache</a>, since it seemed simple enough not to cause any problems, and logicless enough not to invite any shitty coding paradigms.</p>
+<p>The new source:</p>
+<ul>
+<li><a href="http://b.3cu.eu/files/not_a_blog_python.tar">not_a_blog_python.tar</a></li>
+<li><a href="http://b.3cu.eu/files/newhttpd.conf.fragment">newhttpd.conf.fragment</a></li>
+</ul>
+<p>It took a little while to achieve feature parity with the PHP version, but the swearfiltering stuff seems more readable now, if not significantly more scalable/efficient. There's probably some fancypants lambdaing I could do, but I'll come back to that when it's not 01:59.</p>
+<p>In other news, my friend Matt has gone and made his own Python non-blog over at <a href="http://b.mattfellows.me.uk">b.mattfellows.me.uk</a>. Matt - I'll take at look at your impl sometime when I shouldn't be sleeping :)</p>

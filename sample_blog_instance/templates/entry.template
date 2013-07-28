@@ -1,0 +1,10 @@
+{{! variable fields: published_date, filename, title, content, twitter_id, tag }}
+<div class="entry">
+  <h1 class="entryTitle">{{published_date}} - <a href="/entry/{{filename}}">{{title}}</a></h1>
+  <div class="entryBody">
+{{{content}}}
+  </div>
+  <div class="entryControls">
+    <span class='twitter'>twitter</span>: <a href="http://twitter.com/intent/tweet?text=@{{twitter_id}}+ur+opinions+go+here&hashtags={{tag}}">say things</a> <a href="http://twitter.com/#!/search/%23{{tag}}">read things</a>
+  </div>
+</div>

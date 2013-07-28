@@ -1,0 +1,5 @@
+<p>I swear too much. The trouble is, I actually quite enjoy swearing, but I don't want random Internet goons to find this non-blog all covered in curse words and form a poor opinion of me.</p>
+<em>What the real trouble is.</em>
+<p>The real trouble is, I tend to mash a lot of naughty words together with regular words when I swear, meaning grepping for just the whole-word swearwords is insufficient. A blind search-replace is bad, too; I love non-blogging about Arsenal, Jarvis Cocker and... manuscripts too damned much to see those words unnecessarily mangled by my profanitybot.</p>
+<em>What the solution is.</em>
+<p>The solution is regex matching rude words as part of any whole word, <em>excluding</em> a list of safe whole-word matches produced by grepping /words for swears. It's not rocket science, but it does mean I can type "this swanky scraper is a twatwaffle, and you, sir, are a cock juggling thundercunt" without fear of causing undue distress.</p>

@@ -1,0 +1,17 @@
+<VirtualHost 173.203.111.253:80>
+   ServerName b.3cu.eu
+   DocumentRoot /home/tom/web/blog
+   ProxyRequests off
+   ProxyPass /style.css !
+   ProxyPass /images !
+   ProxyPass /files !
+   ProxyPass / http://localhost:8080/
+   ProxyPassReverse / http://localhost:8080/
+   ProxyPreserveHost on
+       <Proxy *>
+           Options FollowSymLinks MultiViews
+           AllowOverride All
+           Order allow,deny
+           allow from all
+       </Proxy>
+</VirtualHost>

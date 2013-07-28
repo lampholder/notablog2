@@ -1,0 +1,8 @@
+<p>Okay so somebody's being a cunt.</p>
+<p>Every so often the non-blog returns a blank page. Apache logs a 408, and cherrypy says nothing. Refresh the page another time or two and BAM: a nice big helping of HTML.</p>
+<p>Trawling the Internets returns an unnerving clutch of unanswered forum questions circa 2008/9; often the first whiff of death for a pet project.</p>
+<p>Let's look at the players: we've chrome consuming the page (some talk links the problem with chrome/IE but not firefox), Apache with mod_proxy doing its thing (again, more smoke here: mod_proxy are you <a href=http://www.enricozini.org/2007/tips/mod-proxy-html-and-gzip/">mishandling gzipped cherrypy output</a>?), then cherrypy itself. But it seems odd for cherrypy to be timing out without even logging a request on the blank-page events?</p>
+<em>Cherrypy I'm still looking at you</em>
+<p>Seems to me like mod_proxy is an unlikely candidate for failure; not soo cherrypy. <a href="http://www.enricozini.org/2007/tips/mod-proxy-html-and-gzip/">The last post I found</a> linked this behaviour with a cherrypy 3.1.2 bug, so I've upgraded to 3.2. Let's see what happens, and let me know if you see more blank pages.</</p>
+<p><em>EDIT:</em> post upgrade - still fucked.</p>
+<p><em>EDIT2:</em> I've increased servier.socket_timeout as recommended <a href="https://groups.google.com/forum/?fromgroups#!topic/cherrypy-users/51GXbaHQE5A">here</a>; let's see how this goes.</p> 

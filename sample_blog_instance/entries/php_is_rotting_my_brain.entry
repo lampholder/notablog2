@@ -1,0 +1,8 @@
+<p>I might rewrite this thing in Python.</p>
+<p>Over the years, I've gotten pretty good at writing shitawful PHP, copy+pastaing it off the Internet  into procedural abominations that are illegible a month after the event. In this way I have built my generic HTTP logger,  my screen-to-JSON scraping "framework",  my task-type-allocation token tracker, the <a href="http://df.3cu.eu/help.html">doomfacer</a> and any number of client mockups, text parsing scriptlets and other bits pieces to make my daily life easier.</p>
+<em>This has to change.</em>
+<p>I treat PHP like a whore. I know deep down I should be giving it a bit more respect, I should be taking advantage of the more modern langauage features it now supports, but it just doesn't encourage writing elegant code, and so I don't.</p>
+<em>Cherrypy</em>
+<p>Lately I've been using cherrypy for some more... exotic applications (a web interface to the irssi screen running on my server to support switching irc channel by clicking links on the site). I like its simplicity and portability (with a built in HTTP server you can run it anywhere).</p>
+<em>Slowing the decline.</em>
+<p>There's no question that my coding skills have been wasting away since the move to management. However I do still find many occasions in which I need to program and Python, unlike PHP, does at  least encourage more elegant, more functional coding. If I can commit to assembling my bullshit projects in Python rather than PHP, maybe I can at least for a while halt the atrophe of my proper programming muscles.</p>

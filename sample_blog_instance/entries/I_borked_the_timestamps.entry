@@ -1,0 +1,9 @@
+<em>I fucked the timestamps</em>
+<p>Turns out there is a very good reason not to rely on file system timestamps - they're fragile and fiddly as fuck to put back to how they were before.</em>
+<p>On the plus side, my blog is now built out of non-revolting python - there's actually probably a blog post's worth of interesting things to say about that. In summary, cherrypy makes it pleasantly trivial to bundle your data access layer (+ optionally CRUD operations) and expose it as a JSON interface over HTTP:
+<ul>
+<li><a href='/api/entries/'>http://b.3cu.eu/api/entries</a></li>
+<li><a href='/api/entry/I_borked_the_timestamps.entry'>http://b.3cu.eu/api/entry/I_borked_the_timestamps.entry</a></li>
+</ul>
+<p>
+

@@ -1,0 +1,25 @@
+<p>My raspberry pi has finally arrived!</p>
+<em>So what are you going to do with the thing?</em>
+<p>In summary: I'm going to turn it into a radio alarm clock. But not just any radio, no, but a radio alarm clock that is <em>good</em>.</p>
+<p>We can perform surgery on brains and place gentlemens on the moon, but at the time of writing the human race is yet to achieve creating a bedside radio alarm clock that is both clever (supporting, say, different alarm times/radio stations for work days and weekends/bank holidays) and has a user interface that is not brain-smashingly shitawful. Take, for example, my last radio alarm clock. On the face of things, it ticked a lot of boxes:</p>
+<ul>
+<li>DAB + FM</li>
+<li>Two separately configurable alarms</li>
+<li>Backlit display for reading the time at nights</li>
+<li>Stylish black plastic triangle form factor</li>
+</ul>
+<p>After getting it home, however, the flaws quickly became apparent:</p>
+<ul>
+<li>A tiny little hum, only audible when you ear is right up close to the radio (which is to say, whenever you are in bed)</li>
+<li>One wheel for picking radio stations - rolling this just scrolled through the list of stations, you had to press a different button (one of four identical buttons) to change to the new station, and you had to do it within a second of finding the station name otherwise it forgot your choice</li>
+<li>A screen so bright it would bathe the whole bedroom in a supernatural blue glow at night (with no option to dim)</li>
+<li>An OS so advanced as to be able to crash, freezing the clock/alarm clock functionality (but leaving the aforementioned glow intact).</li>
+</ul>
+<p>I believe it is simply no longer possible to build a physical (switches/dials/knobs) UI for something as sophisticated as radio alarm clocks have become. The solution is to build a radio that exposes the very basic functionality (volume, on/off-edness, choice of preset station) via physical buttons, but supports advanced configuration over http/ssh.</p>
+<em>How to actually build the thing</em>
+<p>I've no interest in designing/building the case from scratch, and it seems Roberts are pretty good at building nice-looking radios, so I've put in a bid for this bad boy (it's teak!) on the old ebay:</p>
+<img src="/images/radio.png">
+<p>And I've ordered a <a href="http://www.amazon.co.uk/gp/product/B001EDO3MI/ref=oh_details_o00_s00_i00">DAB/FM USB dongle</a> off of Amazon. I'm hoping I can replace the tuning dial display on the radio case with a <a href="http://www.ebay.co.uk/itm/USB-enabled-intelligent-32x16-pixel-LED-matrix-display-YELLOW-/250919028099?pt=UK_BOI_Electrical_Components_Supplies_ET&hash=item3a6bf08583#ht_2702wt_1123">dot-matrix LED display</a>. I'm also hoping I can recycle the speaker that's in there right now and attach it to the raspberry pi, which might see me attempting some soldering :\</p>
+<em>That's only the beginning</em>
+<p>Once the basic setup is in place, the possibilities are endless. Text-to-speech travel alerts? Weather alerts? Summary of major news stories? How about inbound SMS scrolling across the dot matrix as they arrive, so you don't have to pick up your phone to read them?</p>
+<p>Watch this space for progress...</p>

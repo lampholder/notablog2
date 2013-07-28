@@ -1,0 +1,7 @@
+<VirtualHost 173.203.111.253:80>
+   ServerName b.3cu.eu
+   ServerAlias blog.3cu.eu
+   DocumentRoot /home/tom/web/blog
+   RewriteEngine On
+   RewriteRule (?i)^/(entries/.+\.entry)$ /index\.php\?file=$1
+</VirtualHost>

@@ -1,0 +1,41 @@
+<p>WARNING: My swearfilter appears to be stripping the newlines from my entry files - not usually a big deal what with HTML, but it does mean my &lt;pre&gt;-tagged sourcecode snippets have trained themselves up into one massive retarded line. Which is something of a pity, since I just hooked up the <a href="http://www.steamdev.com/snippet/">snippet</a> jQuery syntax-highlighting plugin. Ah well, unfucked source snippets will have to wait for another day - for now maybe try pushing it through <a href="http://jsbeautifier.org">jsbeautifier.org</a> if you give a sufficiently large shit. On reflection, don't do this. The comments still fuck it all to pieces.</p>
+<br>
+<em>What in the shiting fuck: two entries on one day?</em>
+<p>What can I say; I've spent a lot of the weekend on the computer. Apart from doodling up a picture, I spent some (a shitload more than warranted) time greasemonkeying up a thing for kanbanery, the online kanban tool we're using in the office.</p>
+<p>All the fucker does is replace the string '[PAIR]' or '[SOLO]' in a task's title with an attractive icon image. The trouble is, kanbanery is all Ajaxed to fuck, and the javascript all minified, so there was no good way to hook in to the page to keep updating the images. So I decided to pick a bad way, and hook into every successful Ajax call:</p>
+<pre class="js">$(document).ajaxComplete(function() { iconify(); });</pre>
+<p>Alas, the above works in Firefox's Greasemonkey, but not in Chrome's Tampermonkey. And since almost everybody's using Chrome these days, a Firefox-only user script felt like (even more of) a waste of time.</p>
+<p>The problem seems to be something to do with the document object; either it's not the right document yet, or it's a wrapped version of the document, or any number of excuses that are tough to verify since greasemonkey scripts are a dickhole to debug. In the end, <a href="http://stackoverflow.com/questions/5202296/add-a-hook-to-all-ajax-requests-on-a-page">this Stack Overflow question</a> plus a sprinking of unsafeWindow references did 'the job':
+<pre class="js">
+function addXMLRequestCallback(callback){
+    var oldSend, i;
+    if( unsafeWindow.XMLHttpRequest.callbacks ) {
+        // we've already overridden send() so just add the callback
+        unsafeWindow.XMLHttpRequest.callbacks.push( callback );
+    } else {
+        // create a callback queue
+        unsafeWindow.XMLHttpRequest.callbacks = [callback];
+        // store the native send()
+        oldSend = unsafeWindow.XMLHttpRequest.prototype.send;
+        // override the native send()
+        unsafeWindow.XMLHttpRequest.prototype.send = function(){
+            // process the callback queue
+            // the xhr instance is passed into each callback but seems pretty useless
+            // you can't tell what its destination is or call abort() without an error
+            // so only really good for logging that a request has happened
+            // I could be wrong, I hope so...
+            // EDIT: I suppose you could override the onreadystatechange handler though
+            for( i = 0; i < unsafeWindow.XMLHttpRequest.callbacks.length; i++ ) {
+                unsafeWindow.XMLHttpRequest.callbacks[i]( this );
+            }
+            // call the native send()
+            oldSend.apply(this, arguments);
+        };
+    }
+}
+
+addXMLRequestCallback( function( xhr ) {
+  iconify();
+});
+</pre>
+<p>Of course, that's not hooking into exactly the same place, though you could wait on the xhr's onstatusreadychange event for a closer analogue. Anyway, it works well enough and I have better things to do in life, like doodling, and not planning a 30th birthday party.</p>

@@ -1,0 +1,11 @@
+<em>Sometimes, bad things happen.</em>
+<p>And when the shit is hitting the fan, you want to make sure that *everybody* knows about it. But how?</p>
+<em>Like a fucking fire-engine, that's how.</em>
+<p>The emergency services have demonstrated that the best way to draw attention to danger and crisis is with a spining/flashing catastrophe-light - a spinning light says that serious people are doing serious business.</p>
+<em>But won't a spinning/flashing catastrophe-light only enhance the sense of panic and confusion?</em>
+<p>No, not if it is a blue spinning/flashing catastrophe-light; blue is a calming colour.</p>
+<em>But how do I active the light? I don't have the strength for physical switches!</em>
+<p>Damned right; save your strength for tackling that emergency. Matt combined his mutant building-things powers with a USB relay module (from <a href = "http://www.robot-electronics.co.uk/acatalog/Relay_Modules.html">robot-electronics</a> no less), a 4-gang extension lead and (I'm guessing) some pretty fuckugly PHP to build a spinning/flashing catastrophe-light you can control from the comfort of your very own IRC client.</p>
+<h3>The light in action (calming effect of blue modelled by grahamb):</h3>
+<br>
+<iframe src="http://player.vimeo.com/video/54089424?badge=0" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>

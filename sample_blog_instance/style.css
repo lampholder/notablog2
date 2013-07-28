@@ -1,0 +1,116 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #282828;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#282828),  to(#000));
+    background: -moz-linear-gradient(top, #282828, #000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#282828', endColorstr='#000000');
+    color: #dddddd;
+}
+
+div.title a {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+div.title h1, h2 {
+    font-family: Consolas, "Bitstream Vera Sans Mono", "Andale Mono", Monaco,   "DejaVu Sans Mono", "Lucida Console", monospace;
+}
+
+div.title h1 {
+    font-size: 40pt;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+div.title h2 {
+    font-size: 15pt;
+    margin-top: -10px;
+    margin-left: 23px;
+    margin-bottom: 40px;
+    color: #bbbbbb;
+}
+
+img.rss {
+    position: relative;
+    left: 20px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+div.entry {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+div.entry, div.entry h1, div.entry h2, div.entry h3, div.entry p, div.entry li, div.entry ul, div.entry a {
+    font-weight: normal;
+    font-family: Consolas, "Bitstream Vera Sans Mono", "Andale Mono", Monaco, "DejaVu Sans Mono", "Lucida Console", monospace;
+    font-size: 10pt;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+hr {
+    margin-top: 22px;
+    margin-bottom: 28px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/*
+div.entry:hover {
+    background: #232323;
+}
+*/
+
+div.entry p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+div.entry h1.entryTitle, div.entry h1.entryTitle a {
+    color: #00FF00;
+}
+
+div.entry a {
+    color: white;
+    text-decoration: underline;
+}
+
+div.entry a:hover {
+    text-decoration: none;
+}
+
+div.entry a.sw {
+    text-decoration: none;
+}
+
+div.entry img {
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+div.entryControls span.twitter {
+    color: #4099FF;
+}
+
+div.entries {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 930px;
+    background-color: #101010;
+    border-radius: 10px;
+    padding: 12px;
+}
+

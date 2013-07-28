@@ -1,0 +1,21 @@
+<p>I have a very poor handle on what it is my government is doing most of the time. I'd struggle to name most of the cabinet ministers.</p>
+<em>This is a bad thing.</em>
+<p>I'm a clever dude; I consider myself the type of guy who should take an interest in this sort of thing. The trouble is, I'm also a lazy dude, with a terrible memory, especially for names and faces.</p>
+<em>So what's the solution?</em>
+<p>Programming! Of course. As in all things, I can augment my poor brain function and compensate for laziness using the power of computers. An app, even? Yes, why the fuck not some sort of app.</p>
+<em>What will it do?</em>
+<p>Why, it will gather current news stories/other info and aggregate said stories beneath the relevant cabinet minister. It'll eventually plug in to twitter, where available, and some other web 2.0 bullshit as well probably. Crucially, the app will pull down content at 0400 every morning (a la the superb guardian anywhere app for android) so that I can digest each politician's activities en route to work in spite of shitty railway 3G signal.</p>
+<p>The prototype is already running - I've got a cron job scraping a number of sites/intefacing with a bunch of APIs, aggregating their content. For now, that's:
+<ul>
+<li>http://pariliament.uk's site (for the department/cabinet minister listings)</li>
+<li>http://theyworkforyou.com's API (for constituency/extra details)</li>
+<li>http://news.google.com's RSS feed (for a list of headlines concerning each minister)</li>
+</ul>
+And shortly:
+<ul>
+<li>The Guardian's politics API</li>
+<li>AlchemyAPI's web page cleaning service</li>
+<li>Any other source of political info/trivia I can locate</li>
+</ul>
+</p>
+<p>For now, the prototype is shitting it's output to <a href="http://gov.3cu.eu">http://gov.3cu.eu</a> - it's super ugly, and not finding much content for the lib dems - a combo of parliament.uk and twfy sees the automated scraper searching for 'Vincent' Cable and 'Nicholas' Clegg, resulting in very few hits :\</p>

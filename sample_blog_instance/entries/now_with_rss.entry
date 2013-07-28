@@ -1,0 +1,4 @@
+<p>It is still not a blog, but it has an rss feed :)</p>
+<p style="text-decoration: line-through;">It's up there ^ next to the title - click it to make sure you never miss an update!<p>
+<p>Apparently it's all about the rss autodiscovery these days, so my invalid HTML rss link is GONE, replaced with a hidden link. It's for the best; that nasty orange square was ruining the aesthetic of this otherwise-beautiful not-blog.</p>
+<p>Additionally: looking at the code after all this time has made me realise it's some pretty ugly python - I'll have to rework this pretty soon. It's also made me realise that I've forgotten everything I've learned about git :\</p>
