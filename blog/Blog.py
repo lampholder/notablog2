@@ -77,7 +77,7 @@ class Blog:
 
   @cherrypy.expose
   def entries(self):
-    entries = '<hr>\n'.join([self._format_entry(entry['filename']) for entry in self.api.entries()])
+    entries = '\n'.join([self._format_entry(entry['filename']) for entry in self.api.entries()])
     return pystache.render(self._page_template, {'content': entries})
 
   @cherrypy.expose
